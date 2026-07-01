@@ -30,4 +30,6 @@ model Diaria {
   // Configuração da chave estrangeira conectando ao Servidor
   servidorId     Int
   servidor       Servidor @relation(fields: [servidorId], references: [id], onDelete: Cascade)
+  
+  @@index([servidorId])
 }
